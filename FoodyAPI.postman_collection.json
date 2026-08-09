@@ -1,0 +1,254 @@
+{
+  "info": {
+    "_postman_id": "20cee787-9355-406a-8daf-1ed8a765bf7f",
+    "name": "FoodyAPI",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "57021436"
+  },
+  "item": [
+    {
+      "name": "Login",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiJlOTFkMDRiMS0wNmYwLTRlNjctODI5ZS1hMmM5YjVmZjFkYTkiLCJpYXQiOiIwOC8wOS8yMDI2IDE0OjQwOjQ5IiwiVXNlcklkIjoiZGRmMWQyYzgtM2IxZS00MzkzLTc1MTItMDhkZTc2OGU4Zjk3IiwiRW1haWwiOiJ0ZXN0MTFAdGVzdGluZy5jb20iLCJVc2VyTmFtZSI6InRlc3QxMSIsImV4cCI6MTc4NjMwODA0OSwiaXNzIjoiRm9vZHlfQXBwX1NvZnRVbmkiLCJhdWQiOiJGb29keV9XZWJBUElfU29mdFVuaSJ9.XqLLAzaqIra3EM7nPEM9MXO-NhdIDMY3LAkMrOqUmh0",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\"userName\": \"test11\", \n\"password\": \"test11\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://{{host}}/user/Authentication",
+          "protocol": "http",
+          "host": [
+            "{{host}}"
+          ],
+          "path": [
+            "user",
+            "Authentication"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GetAll",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiJlOTFkMDRiMS0wNmYwLTRlNjctODI5ZS1hMmM5YjVmZjFkYTkiLCJpYXQiOiIwOC8wOS8yMDI2IDE0OjQwOjQ5IiwiVXNlcklkIjoiZGRmMWQyYzgtM2IxZS00MzkzLTc1MTItMDhkZTc2OGU4Zjk3IiwiRW1haWwiOiJ0ZXN0MTFAdGVzdGluZy5jb20iLCJVc2VyTmFtZSI6InRlc3QxMSIsImV4cCI6MTc4NjMwODA0OSwiaXNzIjoiRm9vZHlfQXBwX1NvZnRVbmkiLCJhdWQiOiJGb29keV9XZWJBUElfU29mdFVuaSJ9.XqLLAzaqIra3EM7nPEM9MXO-NhdIDMY3LAkMrOqUmh0",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://{{host}}/food/all",
+          "protocol": "http",
+          "host": [
+            "{{host}}"
+          ],
+          "path": [
+            "food",
+            "all"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "SearchFood",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiJlOTFkMDRiMS0wNmYwLTRlNjctODI5ZS1hMmM5YjVmZjFkYTkiLCJpYXQiOiIwOC8wOS8yMDI2IDE0OjQwOjQ5IiwiVXNlcklkIjoiZGRmMWQyYzgtM2IxZS00MzkzLTc1MTItMDhkZTc2OGU4Zjk3IiwiRW1haWwiOiJ0ZXN0MTFAdGVzdGluZy5jb20iLCJVc2VyTmFtZSI6InRlc3QxMSIsImV4cCI6MTc4NjMwODA0OSwiaXNzIjoiRm9vZHlfQXBwX1NvZnRVbmkiLCJhdWQiOiJGb29keV9XZWJBUElfU29mdFVuaSJ9.XqLLAzaqIra3EM7nPEM9MXO-NhdIDMY3LAkMrOqUmh0",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://{{host}}/food/Search?keyword=cake",
+          "protocol": "http",
+          "host": [
+            "{{host}}"
+          ],
+          "path": [
+            "food",
+            "Search"
+          ],
+          "query": [
+            {
+              "key": "keyword",
+              "value": "cake"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "CreateNewFood",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiJlOTFkMDRiMS0wNmYwLTRlNjctODI5ZS1hMmM5YjVmZjFkYTkiLCJpYXQiOiIwOC8wOS8yMDI2IDE0OjQwOjQ5IiwiVXNlcklkIjoiZGRmMWQyYzgtM2IxZS00MzkzLTc1MTItMDhkZTc2OGU4Zjk3IiwiRW1haWwiOiJ0ZXN0MTFAdGVzdGluZy5jb20iLCJVc2VyTmFtZSI6InRlc3QxMSIsImV4cCI6MTc4NjMwODA0OSwiaXNzIjoiRm9vZHlfQXBwX1NvZnRVbmkiLCJhdWQiOiJGb29keV9XZWJBUElfU29mdFVuaSJ9.XqLLAzaqIra3EM7nPEM9MXO-NhdIDMY3LAkMrOqUmh0",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n \"name\": \"PastaMan\", \n \"description\": \"This Pasta is created via Postman\", \n \"url\": \"https://upload.wikimedia.org/wikipedia/commons/f/fd/Ghostscript_Tiger.svg\" \n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://{{host}}/food/create",
+          "protocol": "http",
+          "host": [
+            "{{host}}"
+          ],
+          "path": [
+            "food",
+            "create"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "SearchPasta",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiJlOTFkMDRiMS0wNmYwLTRlNjctODI5ZS1hMmM5YjVmZjFkYTkiLCJpYXQiOiIwOC8wOS8yMDI2IDE0OjQwOjQ5IiwiVXNlcklkIjoiZGRmMWQyYzgtM2IxZS00MzkzLTc1MTItMDhkZTc2OGU4Zjk3IiwiRW1haWwiOiJ0ZXN0MTFAdGVzdGluZy5jb20iLCJVc2VyTmFtZSI6InRlc3QxMSIsImV4cCI6MTc4NjMwODA0OSwiaXNzIjoiRm9vZHlfQXBwX1NvZnRVbmkiLCJhdWQiOiJGb29keV9XZWJBUElfU29mdFVuaSJ9.XqLLAzaqIra3EM7nPEM9MXO-NhdIDMY3LAkMrOqUmh0",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://{{host}}/food/Search?keyword=PastaMan",
+          "protocol": "http",
+          "host": [
+            "{{host}}"
+          ],
+          "path": [
+            "food",
+            "Search"
+          ],
+          "query": [
+            {
+              "key": "keyword",
+              "value": "PastaMan"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "PatchfoodName",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiJlOTFkMDRiMS0wNmYwLTRlNjctODI5ZS1hMmM5YjVmZjFkYTkiLCJpYXQiOiIwOC8wOS8yMDI2IDE0OjQwOjQ5IiwiVXNlcklkIjoiZGRmMWQyYzgtM2IxZS00MzkzLTc1MTItMDhkZTc2OGU4Zjk3IiwiRW1haWwiOiJ0ZXN0MTFAdGVzdGluZy5jb20iLCJVc2VyTmFtZSI6InRlc3QxMSIsImV4cCI6MTc4NjMwODA0OSwiaXNzIjoiRm9vZHlfQXBwX1NvZnRVbmkiLCJhdWQiOiJGb29keV9XZWJBUElfU29mdFVuaSJ9.XqLLAzaqIra3EM7nPEM9MXO-NhdIDMY3LAkMrOqUmh0",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "[{ \n    \"path\": \"/name\", \n    \"op\": \"replace\", \n    \"value\": \"PastaManEdit\"\n}]",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://{{host}}/food/Edit/168e891c-415c-47a9-91f1-08de7690bc20",
+          "protocol": "http",
+          "host": [
+            "{{host}}"
+          ],
+          "path": [
+            "food",
+            "Edit",
+            "168e891c-415c-47a9-91f1-08de7690bc20"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DeletingPastaMan",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiJlOTFkMDRiMS0wNmYwLTRlNjctODI5ZS1hMmM5YjVmZjFkYTkiLCJpYXQiOiIwOC8wOS8yMDI2IDE0OjQwOjQ5IiwiVXNlcklkIjoiZGRmMWQyYzgtM2IxZS00MzkzLTc1MTItMDhkZTc2OGU4Zjk3IiwiRW1haWwiOiJ0ZXN0MTFAdGVzdGluZy5jb20iLCJVc2VyTmFtZSI6InRlc3QxMSIsImV4cCI6MTc4NjMwODA0OSwiaXNzIjoiRm9vZHlfQXBwX1NvZnRVbmkiLCJhdWQiOiJGb29keV9XZWJBUElfU29mdFVuaSJ9.XqLLAzaqIra3EM7nPEM9MXO-NhdIDMY3LAkMrOqUmh0",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://{{host}}/food/delete/168e891c-415c-47a9-91f1-08de7690bc20",
+          "protocol": "http",
+          "host": [
+            "{{host}}"
+          ],
+          "path": [
+            "food",
+            "delete",
+            "168e891c-415c-47a9-91f1-08de7690bc20"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
